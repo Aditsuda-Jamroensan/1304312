@@ -13,8 +13,8 @@ med = statistics.median(data)
 sd = statistics.stdev(data)
 var = statistics.variance(data)
 
-#data2 = [1,2,5,8,9]
-#sd2 = statistics.stdev(data2)
+data2 = [1,2,5,8,9]
+
 
 import numpy as np
 import pandas
@@ -28,6 +28,4 @@ from statsmodels.formula.api import ols
 model = ols("y ~ x", data).fit()
 print(model.summary())
 
-data2 = pandas.DataFrame({'x': x, 'y1': np.log(y)}) 
-model1 = ols("y1 ~ x", data2).fit()
-print(model1.summary())
+#Constructing linear model for first order reaction (model2) 
